@@ -1,0 +1,41 @@
+
+
+x = ReadMyImage('Part6x.bmp');
+DisplayMyImage(x);
+title('Original image');
+
+h = ReadMyImage('Part6h.bmp');
+DisplayMyImage(h);
+title('Impulse response');
+
+y = DSLSI2D(h,x);
+
+DisplayMyImage(abs(y));
+title('|y[m,n]|');
+
+DisplayMyImage(abs(y).^3);
+title('|y[m,n]|^3');
+
+DisplayMyImage(abs(y).^5);
+title('|y[m,n]|^5');
+
+
+function [y]=DSLSI2D(h,x)
+
+Mh = size(h,1);
+Nh = size(h,2);
+Mx = size(x,1);
+Nx = size(x,2);
+
+My = Mx + Mh - 1;
+Ny = Nx + Nh - 1;
+
+y= zeros(My, Ny);
+
+for k=0:Mh-1
+    for l=0:Nh-1
+        y(k+1:k+Mx,l+1:l+Nx)=y(k+1:k+Mx,l+1:l+Nx)+h(k+1,l+1)*x;
+    end
+end
+
+end
