@@ -1,7 +1,7 @@
 # EE321: Signals and Systems
 📄 Lab codes and reports for the EE321 Signals and Systems course at Bilkent University.
 
-🖥️🔌 The labs involve implementations of signal processing and applications using  intensive MATLAB coding. Refer to the lab reports for detailed explanations and theoretical background of the implementations, along with the specifications and results.
+🖥️ The labs involve implementations of signal processing and applications using  intensive MATLAB coding. Refer to the lab reports for detailed explanations and theoretical background of the implementations, along with the specifications and results.
 
 ## Labs 
 - [Lab 1](https://github.com/ynarter/EE321/tree/main/Lab%201)
